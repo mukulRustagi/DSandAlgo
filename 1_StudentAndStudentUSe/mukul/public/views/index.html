@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width = device-width, initial-scale = 0, user-scalable = no, minimum-scale = 1, maximum-scale = 1">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <link href="../css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <link href="../css/screen.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="mainContainer">
+        <div class="inputField">
+            <textarea class="textField" placeholder="write your values"></textarea>
+        </div>
+        <div class="options">
+            <div class="btnJson">json</div>
+         
+            <div class="audioBlock">
+                <div class="block time">5s</div>
+                <div class="block play"><img src="../images/icon-play.png" class="blockIcon"></div>
+                <div class="block stop"><img src="../images/icon-stop.png" class="blockIcon"></div>
+            </div>
+            <div class="audioFiles"></div>
+        </div>
+        <div class="selectionContainer">
+                <div class="languages">
+                    
+                </div>
+                <div class="genders">
+                        <div class="gender" data-id="male">
+                            <img src="../images/icon-male.png" class="genderImage">
+                            <div class="bar"></div>
+                        </div>
+                        <div class="gender" data-id="female">
+                            <img src="../images/icon-female.png" class="genderImage">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                <div class="brands">
+                    <div class="brand selected" data-id="amazon">
+                        <img src="../images/icon-amazon.png" class="brandImage">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="brand" data-id="google">
+                            <img src="../images/icon-google.png" class="brandImage">
+                            <div class="bar"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="voiceOptions">
+             
+              
+            </div>
+    </div>
+
+
+    <script id="languageTemplate" type="text/x-jquery-tmpl">
+        <div class="lang" data-id="{{html key}}">{{html key}}</div>
+    </script>
+    <script id="voiceRepresentativeTemplate" type="text/x-jquery-tmpl">
+        <div class="voice">
+            <div class="imageBlock">
+                <div class="image"></div>
+            </div>
+            <div class="name">{{html voice}}</div>
+        </div>
+    </script>
+
+    <script type="text/x-jquery-tmpl" id="audioTemplate">
+        <audio controls>
+            <source src="http://localhost:4500/resources/{{html file}}" type="audio/ogg"> 
+          </audio>
+    </script>
+
+
+    <script src="../scripts/jquery.js "></script>
+    <script src="../scripts/transit.js "></script>
+    <script src="../scripts/jquery.tmpl.min.js "></script>
+    <script src="../scripts/jquery.cookie.js "></script>
+    <script src="../scripts/moment.min.js "></script>
+    <script src="../scripts/superjson.js "></script>
+    <script src="../scripts/tocca.min.js "></script>
+    <script src="../scripts/socket.io.js "></script>
+
+    <script src="../js/config.js "></script>
+    <script src="../js/data.js "></script>
+    <script src="../js/base.js "></script>
+    <script src="../js/index.js "></script>
+
+</body>
+
+</html>

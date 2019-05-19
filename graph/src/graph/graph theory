@@ -1,0 +1,27 @@
+
+//spanning tree: a tree which is connected means all nodes are connected and undirected and posses tree properties, called as spanning tree.
+// and out of all spanning tree/ graph, one with least weight in total is known as Minimum Spanning tree. there are three porp of mst: connected, weighted, undirected.
+
+// directed graph :one way road
+
+
+
+1. spanning  tree
+- all vertices should be there(n).
+- unidirected 
+- edges, e = n-1
+
+
+kruskal's algorithm : helps us to find MST
+
+cycle detection while making MSt using kruskal's algo
+
+so we'll detect cycle by checking whether there is existing path b/w two vertices that we're going to add, if there is, then we should not add them in tree and move to next edge with  higher or equal weight. So, technically
+what we are gonna do it is we are going to call hasPAth() funct, everytime we add, which leads to poor complexity as hasPAth has it's own complexity O(v^2)or O(v+E).
+
+so, there is another algorithm which can be used for the same, named as Union-find algorithm O(v). 
+
+In union find algo, what we'll do is we'll make a parent array of size of no. of vertices, in that intially we put parent of each vertex is itself(By parent array we'll try to identify if the belong to same connected or not). so vertices, we'll try to add first we check their parent (top most parent like 1->2 2->0 0->0, and the another vertex i am going to add suppose is 3, whose parent is 3) then there is no problem in adding it
+as they belong to different parent or can not belong to same connected component, hence we can add them, suppose if we find they belong to same parent then we'll not that edge in to MST.
+
+and the complexity of this union find algo is O(v) because we'll look for top most parent while adding another edge to the graph.

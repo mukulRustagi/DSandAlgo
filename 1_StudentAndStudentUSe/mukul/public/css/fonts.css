@@ -1,0 +1,36 @@
+
+
+@font-face {
+        font-family: "Montserrat";
+        font-style:normal;
+        font-weight:200;
+        src: local("Montserrat-Light"), url("../fonts/Montserrat-Light.otf") format("truetype");
+}
+@font-face {
+        font-family: "Montserrat";
+        font-style:normal;
+        font-weight:300;
+        src: local("Montserrat-Regular"), url("../fonts/Montserrat-Regular.otf") format("truetype");
+}
+
+@font-face {
+        font-family: "Bauer";
+        font-style:normal;
+        font-weight:300;
+        src: local("Bauer-Medium"), url("../fonts/BauerBodoniStd1Roman.otf") format("truetype");
+}
+
+@font-face {
+        font-family: "Montserrat";
+        font-style:normal;
+        font-weight:400;
+        src: local("Montserrat-SemiBlod"), url("../fonts/Montserrat-SemiBold.otf") format("truetype");
+}
+
+@font-face {
+        font-family: "Montserrat";
+        font-style:normal;
+        font-weight:500;
+        src: local("Montserrat-Bold"), url("../fonts/Montserrat-Bold.otf") format("truetype");
+}
+
