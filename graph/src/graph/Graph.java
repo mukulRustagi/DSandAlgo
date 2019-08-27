@@ -27,6 +27,8 @@ public class Graph {
 		}
 		boolean ans = isConnected(edges);
 		System.out.println(ans);
+		printDFS(edges);
+		printBFS(edges);
 //		System.out.println("####");
 //		int v1 = s.nextInt();
 //		System.out.println(v1 + "##");

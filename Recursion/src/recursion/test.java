@@ -1,4 +1,11 @@
+package recursion;
+
 public class test {
+
+	public static void main(String[] args) {
+		secondSmallest(10);
+	}
+
 	public static int maximumProfit(int budget[]) {
 		// Write your code here
 		budget = mergeSort(budget);
@@ -62,6 +69,15 @@ public class test {
 		righthalf = mergeSort(righthalf);
 		input = merge(lefthalf, righthalf);
 		return input;
+	}
+
+	public static int secondSmallest(int ar) {
+
+		int min = Integer.MIN_VALUE;
+
+		System.out.println(min);
+		return 0;
+
 	}
 
 }

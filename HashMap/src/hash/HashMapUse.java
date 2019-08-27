@@ -2,18 +2,45 @@ package hash;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Scanner;
 
 public class HashMapUse {
 
-	public static void main(String[] args) {
-		int ar[] = { 15, 13, 23, 21, 19, 11, 16 };
-		ArrayList<Integer> ans = longestSubsequence(ar);
-		for (int i : ans) {
-			System.out.print(i + " ");
+	/*
+	 * public static void main(String[] args) { int ar[] = { 15, 13, 23, 21, 19, 11,
+	 * 16 }; ArrayList<Integer> ans = longestSubsequence(ar); for (int i : ans) {
+	 * System.out.print(i + " "); }
+	 * 
+	 * // int n = maxFrequencyNumber(ar); //
+	 * System.out.println("highest frequency: " + n); }
+	 */
+
+	public static void main(String args[]) {
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the number of coins:");
+		int n = s.nextInt();
+		int coins[] = new int[n - 1];
+		for (int i = 0; i < coins.length; i++) {
+			coins[i] = s.nextInt();
 		}
 
-//		int n = maxFrequencyNumber(ar);
-//		System.out.println("highest frequency: " + n);
+		HashMap<Integer, Integer> hm = new HashMap();
+		int ans = -1;
+		for (int i = 0; i < coins.length; i++) {
+			if (!hm.containsKey(coins[i])) {
+				hm.put(coins[i], 1);
+			} else {
+				hm.put(coins[i], hm.get(coins[i]) + 1);
+			}
+		}
+		for (Entry<Integer, Integer> m : hm.entrySet()) {
+			if (m.getValue() % 2 != 0) {
+				ans = m.getKey();
+				break;
+			}
+		}
+		System.out.print("missing coin is:" + ans);
 	}
 
 	public static int maxFrequencyNumber(int[] arr) {
